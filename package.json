@@ -16,8 +16,7 @@
     "jquery": "^3.5.1",
     "jquery-smooth-scroll": "^2.2.0",
     "popper.js": "^1.16.1",
-    "progressbar.js": "^1.1.0",
-    "vue": "^2.6.11"
+    "progressbar.js": "^1.1.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",
