@@ -1,8 +1,9 @@
-import Vue from "vue";
-import App from "./App.vue";
+import $ from"jquery";
+window.$ = $;
+import"bootstrap";
+import"bootswatch/dist/darkly/bootstrap.min.css";
+import"@fortawesome/fontawesome-free/css/all.min.css";
 
-Vue.config.productionTip = false;
-
-new Vue({
-  render: h => h(App)
-}).$mount("#app");
+$(document).ready(() => {
+    console.log("it works!");
+  });
