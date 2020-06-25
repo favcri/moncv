@@ -1,0 +1,17 @@
+li {
+    list-style: none;
+}
+
+.progress {
+    margin-bottom: 3%;
+}
+
+.central {
+    background-color: lightslategray;
+}
+
+.container-fluid {
+    border-radius: 5px;
+    border: black solid 1px;
+    margin-bottom: 5%;
+}
