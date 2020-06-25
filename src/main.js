@@ -6,6 +6,20 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./main.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Chart from "chart.js";
+import Darkmode from 'darkmode-js';
+
+new Darkmode().showWidget();
+var options = {
+  time: "0.5s", // default: "0.3s"
+  mixColor: "#fff", // default: "#fff"
+  backgroundColor: "#fff", // default: "#fff"
+  buttonColorDark: "#100f2c", // default: "#100f2c"
+  buttonColorLight: "#fff" // default: "#fff"
+}
+
+const darkmode = new Darkmode(options);
+darkmode.showWidget();
+
 
 $(document).ready(() => {
   const progressBars = findProgressBars();
@@ -25,7 +39,12 @@ function replaceProgressBars(progressBars) {
     var value = valueElement.getAttribute("aria-valuenow");
     // var color =
     var canvas = document.createElement("canvas");
+    // var desc = 
     progressBar.replaceWith(canvas);
+  
+    // canvas.maintainAspectRatio = false;
+    // canvas.parentNode.style.height = "300px";
+    // canvas.parentNode.style.width = "128px";
 
     createChart(canvas, value);
   }
@@ -38,7 +57,7 @@ function createChart(ctx, value) {
       datasets: [
         {
           data: [value, 100 - value],
-          backgroundColor: ["", "white"],
+          backgroundColor: ["black", "white"],
           borderColor: "white"
         }
       ]
