@@ -15,3 +15,8 @@ li {
     border: black solid 1px;
     margin-bottom: 5%;
 }
+
+.lieu {
+    text-align: right;
+    text-decoration-color: darkgray;
+}
