@@ -43,9 +43,9 @@ function replaceProgressBars(progressBars) {
     // var desc =
     progressBar.replaceWith(canvas);
 
-    // canvas.maintainAspectRatio = false;
-    // canvas.parentNode.style.height = "300px";
-    // canvas.parentNode.style.width = "128px";
+    canvas.maintainAspectRatio = false;
+    canvas.parentNode.style.height = "100%";
+    canvas.parentNode.style.width = "50%";
 
     createChart(canvas, value);
   }
@@ -58,7 +58,7 @@ function createChart(ctx, value) {
       datasets: [
         {
           data: [value, 100 - value],
-          backgroundColor: ["black", "white"],
+          backgroundColor: ["#212529", "white"],
           borderColor: "white"
         }
       ]
