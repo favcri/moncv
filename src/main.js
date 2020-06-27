@@ -3,7 +3,8 @@ window.$ = $;
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import "bootswatch/dist/darkly/bootstrap.min.css";
-import "./main.css";
+import "../src/main.css"; /* Modification des chemins CSS ici pour ne plus les appeler dans le head du index.html */
+import "../public/carousel.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "jquery-smooth-scroll";
 import Chart from "chart.js";
