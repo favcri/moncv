@@ -7,7 +7,7 @@ import "./main.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "jquery-smooth-scroll";
 import Chart from "chart.js";
-import Darkmode from 'darkmode-js';
+import Darkmode from "darkmode-js";
 
 new Darkmode().showWidget();
 var options = {
@@ -16,14 +16,13 @@ var options = {
   backgroundColor: "#fff", // default: "#fff"
   buttonColorDark: "#100f2c", // default: "#100f2c"
   buttonColorLight: "#fff" // default: "#fff"
-}
+};
 
 const darkmode = new Darkmode(options);
 darkmode.showWidget();
 
-
 $(document).ready(() => {
-    $("a").smoothScroll();
+  $("a").smoothScroll();
   const progressBars = findProgressBars();
   replaceProgressBars(progressBars);
   $(".carousel").carousel({
@@ -41,9 +40,9 @@ function replaceProgressBars(progressBars) {
     var value = valueElement.getAttribute("aria-valuenow");
     // var color =
     var canvas = document.createElement("canvas");
-    // var desc = 
+    // var desc =
     progressBar.replaceWith(canvas);
-  
+
     // canvas.maintainAspectRatio = false;
     // canvas.parentNode.style.height = "300px";
     // canvas.parentNode.style.width = "128px";
