@@ -40,15 +40,10 @@ function replaceProgressBars(progressBars) {
   for (let progressBar of progressBars) {
     const valueElement = progressBar.querySelector(".progress-bar");
     var value = valueElement.getAttribute("aria-valuenow");
-    // var color =
+
     var canvas = document.createElement("canvas");
-    // var desc =
+
     progressBar.replaceWith(canvas);
-
-    canvas.maintainAspectRatio = false;
-    // canvas.parentNode.style.height = "1%";
-    // canvas.parentNode.style.width = "50%";
-
     createChart(canvas, value);
   }
 }
@@ -60,8 +55,11 @@ function createChart(ctx, value) {
       datasets: [
         {
           data: [value, 100 - value],
-          backgroundColor: ["#212529", "white"],
-          borderColor: "white"
+          backgroundColor: ["#777777", "white"],
+          borderColor: "white",
+          borderWidth: 3,
+          hoverBackgroundColor: "#343a40",
+          cutoutPercentage: 80 // Ne fonctionne pas ?!
         }
       ]
     },
