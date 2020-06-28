@@ -28,3 +28,11 @@ li {
     text-align: right;
     text-decoration-color: darkgray;
 }
+
+.chartjs-render-monitor {
+    height: 20%;
+}
+
+.badge {
+    white-space: normal;
+}

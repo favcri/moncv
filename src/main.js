@@ -10,6 +10,7 @@ import "jquery-smooth-scroll";
 import Chart from "chart.js";
 import Darkmode from "darkmode-js";
 
+// Paramèetre pour le bouton darkmode
 new Darkmode().showWidget();
 var options = {
   time: "0.5s", // default: "0.3s"
@@ -45,8 +46,8 @@ function replaceProgressBars(progressBars) {
     progressBar.replaceWith(canvas);
 
     canvas.maintainAspectRatio = false;
-    canvas.parentNode.style.height = "100%";
-    canvas.parentNode.style.width = "50%";
+    // canvas.parentNode.style.height = "1%";
+    // canvas.parentNode.style.width = "50%";
 
     createChart(canvas, value);
   }
