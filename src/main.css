@@ -1,32 +1,16 @@
-.carousel-caption {
-    margin-bottom: 3%;
-}
-
 .infos-persos {
     text-align: left;
+    /* vertical-align: middle; */
 }
 
 li {
     list-style: none;
 }
 
-.progress {
-    margin-bottom: 3%;
-}
-
-.central {
-    background-color: lightslategray;
-}
-
 .container-fluid {
     border-radius: 5px;
     border: black solid 1px;
     margin-bottom: 5%;
-}
-
-.lieu {
-    text-align: right;
-    text-decoration-color: darkgray;
 }
 
 .chartjs-render-monitor {
@@ -43,4 +27,10 @@ h2 {
 
 figcaption {
     margin-top: 5px;
+}
+
+#portrait {
+    border-radius: 25px;
+    margin-bottom: 5px;
+    vertical-align: middle;
 }
