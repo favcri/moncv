@@ -5,47 +5,36 @@
 Au début du projet, j'ai installé VS COde, Git et Node.js pour avoir donc npm.  
 
 Pour permettre le déploiement du site (-g pour global) :
+
 **npm install -g @vue/cli**
 
 Je crée le projet avec directement tous les dossiers et fichiers nécessaires au site :
+
 **vue create moncv**
 
 Je vérifie les dépendances (de package.json) et leur mises à jour avec : 
+
 **npm install**
 
 Puis, je termine avec :
+
 **npm run serve** 
 Pour voir en direct sur mon navigateur ma page web (localhost:8080)
 
 J'ai supprimé src/components et src/App.vue.
 J'ai fais ces commandes pour gérer mes dépendances :
+
 **npm uninstall vue --save** 
 **npm install jquery --save**
 **npm install popper.js --save**
 **npm install bootstrap --save**
 **npm install @fortawesome/fontawesome-free --s**
 
-J'ai créé un fichier .gitattributes avec ce contenu pour gérer les fichiers en binaires :
-# Force all line endings to be \n
-text eol=lf
-############################################################
-# git can corrupt binary files if they're not set to binary.
-############################################################
-# Apple office documents are actually folders, so treat them as binary.
-*.numbers binary
-*.pages binary
-*.keynote binary
-# Image files
-*.png binary
-*.jpg binary
-*.jpeg binary
-*.gif binary
-*.webp binary
-*.ico binary
-# Movie and audio files
+J'ai créé un fichier .gitattributes pour gérer les fichiers en binaires :
 
 Après quelques essais avec du HTML et du CSS "bruts", il a été convenu d'utiliser Bootstrap.
 Donc dans src/main.js, j'ai mis :
+
 **import $ from"jquery";
 window.$ = $;
 import"bootstrap";
@@ -54,14 +43,18 @@ import"@fortawesome/fontawesome-free/css/all.min.css";
 $(document).ready(() => {
   console.log("it works!");
   });**
+
 Pour construire mon site avec Bootstrap.
 
 J'ai ensuite créé src/main.css pour ajouter mon CSS personnel.
 Et j'ai ajouté à main.js :
+
 **import ".src/main.css;"**
+
 Pour l'utiliser sans l'appeler dans le HTML.
 
 Pour ajouter d'autres packages, j'ai par exemple fait :
+
 **npm install bootswatch --save**
 
 
@@ -70,21 +63,27 @@ Pour ajouter d'autres packages, j'ai par exemple fait :
 ### Compiles and minifies for production
 
 J'installe un plugin qui crée et push dans la bonne branche :
+
 **npm install push-dir --save-dev**
 
 Et dans package.json, j'ajoute :
+
 **"scripts": {
         ...,"deploy": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
         },**
 
 Grâce à cette commande, un dossier dist est créé avec les fichiers réduits au minimum :
+
 **npm run build**
 
 Une fois le build terminé, j'exécute ancore la commande : 
+
 **npm run deploy**
+
 qui crée une branche gh-pages. Ainsi notre site sera directement accessible depuis une URL github
 
 Pour fixer les chemins de manières statiques, je crée un fichier vue.config.js avec :
+
 **module.exports = {  
         baseUrl: process.env.NODE_ENV === "production" ? "/moncv-test/" : "/"
     };**
@@ -94,7 +93,9 @@ Pour fixer les chemins de manières statiques, je crée un fichier vue.config.js
 ### Lints and fixes files
 
 Pour vérifier les règles :
+
 **npm run lint**
+
 Le litter va contrôler les règles que nous nous sommes fixé tout au long du document. 
 
 
@@ -114,8 +115,10 @@ Points négatifs :
   
 Pour le deuxième plugin, j'ai utilisé Darmode.js https://darkmodejs.learn.uno/
 Pour l'installer :
+
 **npm install darkmode-js**
 J'ai ajouté dans le main.js :
+
 **import Darkmode from 'darkmode-js';
 new Darkmode().showWidget();**
 
