@@ -36,3 +36,11 @@ li {
 .badge {
     white-space: normal;
 }
+
+h2 {
+    margin-top: 5%;
+}
+
+figcaption {
+    margin-top: 5px;
+}
