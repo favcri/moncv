@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
+    "deploy": "push-dir --dir=dist --branch=origin --cleanup --verbose"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.1",
