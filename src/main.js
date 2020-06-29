@@ -3,7 +3,7 @@ window.$ = $;
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import "bootswatch/dist/darkly/bootstrap.min.css";
-import "../src/main.css"; /* Modification des chemins CSS ici pour ne plus les appeler dans le head du index.html */
+import "../src/main.css";
 import "../public/carousel.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "jquery-smooth-scroll";
@@ -14,6 +14,7 @@ import Darkmode from "darkmode-js";
 new Darkmode().showWidget();
 var options = {
   time: "0.5s", // default: "0.3s"
+  right: '2%',
   mixColor: "#fff", // default: "#fff"
   backgroundColor: "#fff", // default: "#fff"
   buttonColorDark: "#100f2c", // default: "#100f2c"

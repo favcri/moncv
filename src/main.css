@@ -2,10 +2,6 @@
     margin-bottom: 3%;
 }
 
-.infos-persos {
-    text-align: left;
-}
-
 li {
     list-style: none;
 }
@@ -14,17 +10,16 @@ li {
     margin-bottom: 3%;
 }
 
-.central {
-    background-color: lightslategray;
-}
-
 .container-fluid {
     border-radius: 5px;
     border: black solid 1px;
     margin-bottom: 5%;
 }
 
-.lieu {
-    text-align: right;
-    text-decoration-color: darkgray;
+figcaption {
+    margin-top: 5px;
+}
+
+h2 {
+    margin-top: 4%;
 }
