@@ -1,7 +1,10 @@
 .DS_Store
 node_modules
 /dist
+<<<<<<< HEAD
 /algojs-favcri
+=======
+>>>>>>> origin/master
 
 # local env files
 .env.local
