@@ -1,7 +1,0 @@
-Installer plugin JS numero 2 https://darkmodejs.learn.uno/
-npm install darkmode-js
-On ajoute
-import Darkmode from 'darkmode-js';
-new Darkmode().showWidget();
-dans le main.js
-Régler les paramètres si nécessaire.
