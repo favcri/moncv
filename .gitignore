@@ -1,6 +1,13 @@
 .DS_Store
 node_modules
 /dist
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+/algojs-favcri
+=======
+>>>>>>> origin/master
+>>>>>>> gh-pages-0b32b4a
 
 # local env files
 .env.local
